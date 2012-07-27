@@ -1,13 +1,13 @@
-Name:    kcolorchooser
-Summary: KDE Color Chooser
-Version: 4.8.97
-Release: 1
-Epoch:   2
-Group:   Graphical desktop/KDE
-License: GPLv2
-URL:     http://www.kde.org
-Source:  ftp://ftp.kde.org/pub/kde/unstable/%version/src/%name-%version.tar.xz
-BuildRequires: kdelibs4-devel >= 2:%{version}
+Name:		kcolorchooser
+Summary:	KDE Color Chooser
+Version:	4.8.97
+Release:	1
+Epoch:		2
+Group:		Graphical desktop/KDE
+License:	GPLv2
+URL:		http://www.kde.org
+Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	kdelibs4-devel
 
 %description
 KColorChooser is a simple application to select the color from the screen or
@@ -19,9 +19,9 @@ Features :
      HTML formats.
 
 %files
-%_kde_bindir/kcolorchooser
-%_kde_applicationsdir/kcolorchooser.desktop
-%_kde_iconsdir/*/*/*/kcolorchooser*
+%{_kde_bindir}/kcolorchooser
+%{_kde_applicationsdir}/kcolorchooser.desktop
+%{_kde_iconsdir}/*/*/*/kcolorchooser*
 
 #----------------------------------------------------------------------
 
