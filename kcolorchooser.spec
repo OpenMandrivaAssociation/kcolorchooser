@@ -1,6 +1,6 @@
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	14.12.0
+Version:	15.04.1
 Release:	1
 Epoch:		2
 Group:		Graphical desktop/KDE
