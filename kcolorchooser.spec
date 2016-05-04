@@ -27,9 +27,9 @@ Features :
      HTML formats.
 
 %files
-%{_kde_bindir}/kcolorchooser
+%{_bindir}/kcolorchooser
 %{_datadir}/applications/kcolorchooser.desktop
-%{_kde_iconsdir}/*/*/*/kcolorchooser*
+%{_datadir}/icons/*/*/*/kcolorchooser*
 
 #----------------------------------------------------------------------
 
