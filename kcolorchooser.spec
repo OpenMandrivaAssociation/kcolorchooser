@@ -28,17 +28,17 @@ Features :
 
 %files
 %{_bindir}/kcolorchooser
-%{_datadir}/applications/kcolorchooser.desktop
+%{_datadir}/applications/org.kde.kcolorchooser.desktop
 %{_datadir}/icons/*/*/*/kcolorchooser*
 
 #----------------------------------------------------------------------
 
 %prep
 %setup -q
+%cmake_kde5 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
 
 %build
-%cmake_kde5 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
-%ninja
+%ninja -C build
 
 %install
 %ninja_install -C build
