@@ -1,6 +1,6 @@
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Epoch:		2
 Group:		Graphical desktop/KDE
@@ -27,7 +27,7 @@ Features :
    - Color values shown in Hue-Saturation-Value (HSV), Red-Green-Blue (RGB) and
      HTML formats.
 
-%files
+%files -f %{name}.lang
 %{_bindir}/kcolorchooser
 %{_datadir}/applications/org.kde.kcolorchooser.desktop
 %{_datadir}/icons/*/*/*/kcolorchooser*
@@ -36,10 +36,11 @@ Features :
 
 %prep
 %setup -q
-%cmake_kde5 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
+%cmake_kde5
 
 %build
 %ninja -C build
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
