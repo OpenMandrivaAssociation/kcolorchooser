@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kcolorchooser-17.12.1.tar.xz: cffbff03263bab4f0cd97e92649e0bd3b3837b55
+sources:
+  kcolorchooser-17.12.2.tar.xz: 3e9bba0f38a4afe92e246a042b13faf0d1341684
