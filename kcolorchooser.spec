@@ -1,7 +1,7 @@
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	 18.12.3
-Release:	2
+Version:	 19.04.0
+Release:	1
 Epoch:		2
 Group:		Graphical desktop/KDE
 License:	GPLv2
@@ -31,6 +31,7 @@ Features :
 %{_bindir}/kcolorchooser
 %{_datadir}/applications/org.kde.kcolorchooser.desktop
 %{_datadir}/icons/*/*/*/kcolorchooser*
+%{_datadir}/metainfo/org.kde.kcolorchooser.appdata.xml
 
 #----------------------------------------------------------------------
 
