@@ -1,6 +1,6 @@
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	 19.04.1
+Version:	 19.04.2
 Release:	1
 Epoch:		2
 Group:		Graphical desktop/KDE
