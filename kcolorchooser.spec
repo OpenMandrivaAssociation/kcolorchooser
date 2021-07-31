@@ -1,6 +1,6 @@
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	21.07.80
+Version:	21.07.90
 Release:	1
 Epoch:		2
 Group:		Graphical desktop/KDE
