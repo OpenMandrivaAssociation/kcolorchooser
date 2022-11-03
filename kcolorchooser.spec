@@ -1,7 +1,7 @@
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	22.08.2
-Release:	2
+Version:	22.08.3
+Release:	1
 Epoch:		2
 Group:		Graphical desktop/KDE
 License:	GPLv2
