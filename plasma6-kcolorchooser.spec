@@ -2,7 +2,6 @@ Name:		plasma6-kcolorchooser
 Summary:	KDE Color Chooser
 Version:	24.01.85
 Release:	1
-Epoch:		2
 Group:		Graphical desktop/KDE
 License:	GPLv2
 URL:		http://www.kde.org
@@ -27,7 +26,7 @@ Features :
    - Color values shown in Hue-Saturation-Value (HSV), Red-Green-Blue (RGB) and
      HTML formats.
 
-%files -f %{name}.lang
+%files -f kcolorchooser.lang
 %{_bindir}/kcolorchooser
 %{_datadir}/applications/org.kde.kcolorchooser.desktop
 %{_datadir}/icons/*/*/*/kcolorchooser*
@@ -36,7 +35,7 @@ Features :
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kcolorchooser-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -46,4 +45,4 @@ Features :
 
 %install
 %ninja_install -C build
-%find_lang %{name} --with-html
+%find_lang kcolorchooser --with-html
