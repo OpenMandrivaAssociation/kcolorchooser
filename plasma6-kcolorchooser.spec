@@ -1,6 +1,6 @@
 Name:		plasma6-kcolorchooser
 Summary:	KDE Color Chooser
-Version:	24.01.85
+Version:	24.01.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2
@@ -35,7 +35,7 @@ Features :
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kcolorchooser-%{version}
+%autosetup -p1 -n kcolorchooser-%{?git:master}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
