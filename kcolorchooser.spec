@@ -1,6 +1,6 @@
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	23.08.5
+Version:	24.02.0
 Release:	1
 Epoch:		2
 Group:		Graphical desktop/KDE
