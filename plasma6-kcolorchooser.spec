@@ -4,7 +4,7 @@
 Name:		plasma6-kcolorchooser
 Summary:	KDE Color Chooser
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2
 URL:		http://www.kde.org
