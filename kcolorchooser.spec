@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		kcolorchooser
 Summary:	KDE Color Chooser
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
@@ -24,6 +24,11 @@ BuildRequires:	cmake(KF6I18n)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6XmlGui)
 
+%rename plasma6-kcolorchooser
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 KColorChooser is a simple application to select the color from the screen or
 from a pallete.
@@ -33,23 +38,8 @@ Features :
    - Color values shown in Hue-Saturation-Value (HSV), Red-Green-Blue (RGB) and
      HTML formats.
 
-%files -f kcolorchooser.lang
+%files -f %{name}.lang
 %{_bindir}/kcolorchooser
 %{_datadir}/applications/org.kde.kcolorchooser.desktop
 %{_datadir}/icons/*/*/*/kcolorchooser*
 %{_datadir}/metainfo/org.kde.kcolorchooser.appdata.xml
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kcolorchooser-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kcolorchooser --with-html
